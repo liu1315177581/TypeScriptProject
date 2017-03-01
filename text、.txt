@@ -13,5 +13,43 @@
 		let list:number[] = [1,2,3];
 		let list:Array<number> = [1,2,3]
 
-	元祖Tupleaaa
-		
+	元祖Tuple
+		元祖类型允许表达固定数量的已知类型集合，但这些类型不必是相同的。例如，想表示一个“number”，“string”组合的类型
+		例子：
+			声明一个元祖类型：	var x:[string,number];
+			初始化他		x = ['hello',10];
+		可以使用数字检索一个已知的元素，
+			x[0].substr(1);
+
+	Enum枚举
+		enum Color{Red，Green,Blue}
+		var c:Color = Color.Green;
+
+		enum Color{Red = 1,Green,Blue}
+		var c:Color = Color.Green;
+
+		enum Color{Red = 1,Green = 2,Blue = 4};
+		var c:Color = Color.Green;
+
+		enum Color{Red=1,Green,Blue};
+		var colorName:string = Color[2];
+
+	Any(描述一些类型不明确的变量)
+		我们需要略过对这些变量进行的类型检查，让他们直接通过编译时的检查。
+		var notSure:any = 4;
+		notSure = ‘aaa’;
+		notSure = false
+
+	Void(没有返回值的函数)
+		function aa():void{
+			console.log('aa');
+		}
+		var a:void = undefined;  //变量为void类型时，只能赋值为undefined或null
+
+
+
+
+
+
+
+
