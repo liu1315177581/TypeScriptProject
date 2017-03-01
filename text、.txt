@@ -1,0 +1,17 @@
+基础类型
+	布尔值
+		let isDone:boolean = false;
+
+	数字
+		let decLiteral:number = 6;
+		let hexLiteral:number = 0xf00d;
+
+	字符串
+		let name:string = 'bob';
+
+	数组
+		let list:number[] = [1,2,3];
+		let list:Array<number> = [1,2,3]
+
+	元祖Tupleaaa
+		
