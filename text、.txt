@@ -1,4 +1,7 @@
-基础类型
+http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Enums.html
+
+
+1，基础类型
 	布尔值
 		let isDone:boolean = false;
 
@@ -45,6 +48,119 @@
 			console.log('aa');
 		}
 		var a:void = undefined;  //变量为void类型时，只能赋值为undefined或null
+
+		
+	
+2，接口：	
+		function aaa(labelledObj:{label:string}){	
+		//aaa有一个参数，并要求这个对象参数有一个名为label类型的string属性，
+		  我们传入的对象参数实际上会包含很多属性，但是编译器只会检查那些必需的属性是否存在，并且其类型是否匹配。
+
+		}
+		var Obj = { size:10, label:'Size 10 object' };
+		aaa(Obj)
+
+		///////////////////////////
+		interface LabelleValue{		//使用接口描述，必需包含一个label属性为类型为string
+			label:string
+		}
+		function printLabel(labelledObj:LabelleValue){
+
+		}
+		var myObj = {size:10, label:'aaa'};
+		printLabel(myObj);
+
+	可选属性
+		接口里的属性不全都是必需的。有些只是在某些条件下存在，或者根本不存在。可选属性在应用“option bags”模式时很常用，
+		即给函数传入的参数对象中只有部分属性赋值了。
+		
+		带有可选属性的接口与普通接口定义差不多，只是在可选属性名字定义的后面加一个？符号。
+		好处：	1，可以对可能存在的属性进行预定义
+			2，可以捕获引用了不存在属性是的错误
+		
+		例子：
+			interface SquareConfig{
+				color?:string;
+				width?:number;
+			}
+			function createSquare(config:SquareConfig):{color:string; area:number}{
+				var newSquare = { color:'white',area:100 };
+				if{config.color}{
+					newSquare.color = config.color;
+				}
+				if(config.width){
+					newSquare.area = config.width*config.width;
+				}
+				return newSquare;
+			}
+			var mySquare = createSquare({color:'black'});
+
+
+	2.1，函数类型
+		接口能够描述javascript中对象拥有的各种各样的外形。
+		除了描述带有属性的普通对象外，接口也可以描述函数类型。
+	
+	
+
+
+	2.2，数组类型
+		数组类型具有一个index类型表示索引的类型，还有一个相应的返回值类型表示通过索引得到的元素的类型；
+	
+		interface StringArray{
+			[index:number]:string;
+		}
+		var myArray:StringArray;
+		mtArray = ['Bob','Fred']
+
+	2.3，类类型
+	
+
+3，类
+	传统javascript程序使用函数和基于原型的继承来创建可重用的组件，但对于熟悉使用面向对象方式的程序员来说有些棘手，
+	因为他们用的是基于类的继承并且对象是从类构建出来的。
+	
+	例子：
+		class Greer{		//声明一个Greer类，拥有3个成员
+			greeting:string;		//带有greeting属性	
+			constructor(message:string){	//一个构造函数
+				this.greeting = message;
+			}
+			greet(){			//一个greet方法
+				return 'Hello,'+this.greeting
+			}
+		}
+		var greeter = new Greer('world');	//new构造一个函数，他会调用之前定义的构造函数，创建一个Greer类型的新对象，并执行构造函数初始化它。
+
+	继承：
+		
+	
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
