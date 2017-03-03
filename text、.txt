@@ -132,10 +132,32 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Enums.html
 		var greeter = new Greer('world');	//new构造一个函数，他会调用之前定义的构造函数，创建一个Greer类型的新对象，并执行构造函数初始化它。
 
 	继承：
+		在Typescript里，我们可以使用常用的面向对象模式。基于类的程序设计中最基本的模式是允许使用继承来扩展一个类。
 		
-	
+		例子：	class Animl{
+				name:string;
+				constructor(theName:string){
+					this.name = theName;
+				}
+				move(disatanceInMeters:number = 0){
+					console.log(`${this,name}moved${distanceInMeters}`);
+				}
+			}
+			
+			class Snake extends Animal{		
+				constructor(name:string){
+					super(name)
+				}
+				move(distanceInMeters = 5){
+					console.log();
+					super.move(distanceInMeters);
+				}
+			}
+		
+			这个例子使用extends来创建子类。并且可以访问其属性和方法。
+			包含constructor函数的派生类必须调用super()，它会执行基类的构造方法
 
-
+	公共，私有与受保护的修饰符
 
 
 
