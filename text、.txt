@@ -1,4 +1,4 @@
-http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Enums.html
+http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Classes.html
 
 
 1，基础类型
@@ -158,9 +158,25 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Enums.html
 			包含constructor函数的派生类必须调用super()，它会执行基类的构造方法
 
 	公共，私有与受保护的修饰符
+		默认为公有：
+			在TypeScript里，每个成员默认为public的。
+		        class Animal{
+				public name:string;
+				public constructor(){}
+				public move(){}
+			}
+			
+		私有属性private
+			class Animal{
+				private name:string;
+				constructor(theName:string){
+					this.name = theName;
+				}
+			}
+			new Animal("Cat").name //报错访问不到
 
-
-
+	存取器
+		TypeScript支持getters/setter来截取对对象成员的访问。
 
 
 		
