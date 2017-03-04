@@ -177,6 +177,7 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Classes.html
 
 	存取器
 		TypeScript支持getters/setter来截取对对象成员的访问。
+	
 
 
 		
