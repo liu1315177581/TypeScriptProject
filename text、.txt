@@ -177,8 +177,73 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Classes.html
 
 	存取器
 		TypeScript支持getters/setter来截取对对象成员的访问。
-	
+		例子1：
+			这里我们使用平常的方法设置或者获取，但可能会有问题
+			class Employee{
+				fullName:string;
+			}
+			var employee = new Employee();
+			employee.fullName = '你好';
+			if(employee.fullName){
+				console.log(employee.fullName);
+			}
+		
+		例子2： 
+			var passcode = 'passcode';
+			class Employee{
+				private _fullName:string;
+				
+				get fullName():string{
+					return this._fullName;
+				}
+				set fullName(newName:string){
+					if(passcode && passcode == 'secret passcode'){
+						this._fullName = newName
+					}else{
+						console.log('error');
+					}
+				}
+			}
+			var employee = new Empoyee();
+			employee.fullName = 'Bob Smith';
+			if(employee.fullName){
+				alert(employee.fullName);
+			}
+			
 
+		
+	静态属性
+		动态属性(类的实例成员，仅当类被实例化的时候才会被初始化的属性)
+		静态属性(存在于类本身而不是类的实例上)static
+			
+		例子：	
+			class Grid{
+				static origin = {x: 0, y:0}
+				a(x:number;y:number){
+					var xDist = (point.x - Grid.origin.x);
+					var yDist = (point.x - Grid.origin.y);
+					return Math.sqrt(xDist * xDist + yDist * yDist)/this.scale;
+				}
+				constructor(public scale:number){
+					
+				}
+			}
+			var grid1 = new Grid(1.0);
+			var grid2 = new Grid(5.0);
+		
+			console.log(grid1.a({x:10,y:10}));
+		
+	抽象类
+		抽象类是供其它类继承的基类。他们一般不会被直接实例化。不同于接口，抽象类可以包含成员的实现细节。
+		abstract关键字是用于定义抽象类和在抽象类内部定义抽象方法
+		
+		例子：
+			abstract class Animal{
+				abstract makeSound():void;
+				move():void{
+					console.log('a');
+				}
+			}
 
 		
 
