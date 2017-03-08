@@ -269,7 +269,28 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Classes.html
 				}
 			}
 			var greeter:Greeter;
-			greeter = new Greeter('world');
+			greeter = new Greeter('world');	
+			//new并执行这个函数，便会得到一个类的实例。这个构造函数也包含了类的所有静态属性。
+			类具有实例部分和静态部分。
+		
+			class Greeter{
+				static standarGreeting = “Hello”;
+				greeting:sting;
+				greet(){
+					if(this.greeting){
+						return "Hello"+this.greeting;
+					}else{
+						return Greeter.standarGreeting
+					}
+				}
+			}
+			var greeter1:Greeter;
+			greeter1 = new Greeter();
+			
+			var greeterMaker:typeof Greeter = Greeter;	//创建变量，保存了这个类，然后取Greeter
+			greeterMaker.standardGreeting = 'Hey there!';
+			var greeter2:Greeter = new greeterMaker();
+			
 			
 		
 
