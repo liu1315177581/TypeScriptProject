@@ -290,7 +290,7 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Classes.html
 			var greeterMaker:typeof Greeter = Greeter;	//创建变量，保存了这个类，然后取Greeter类的类型，这个类型包含了类的所有静态成员和构造函数。
 			greeterMaker.standardGreeting = 'Hey there!';
 			var greeter2:Greeter = new greeterMaker();
-			
+			啊啊啊
 			
 		
 
