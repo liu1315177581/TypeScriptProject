@@ -56,6 +56,27 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Classes.html
 			age: number;
 		}
 		let zhangsan:Person = new Person();
+
+	1.2，参数
+		function test(a:string,b:number,c:string="join"){
+		
+		}
+		默认参数必须声明在必选参数后面
+		test('a',2)	//ok
+
+	1.3 可选参数
+		function test(a:string,b?:number,c:string="join"){
+		
+		}
+		test('aa');	//ok
+		可选参数必须声明在必选参数的后面
+
+	1.4 ...args
+		function fun1(...args){
+			
+		}
+		fun1(1,2,4)
+
 	
 2，接口：	
 		function aaa(labelledObj:{label:string}){	
