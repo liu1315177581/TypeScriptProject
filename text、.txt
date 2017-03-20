@@ -353,7 +353,8 @@ http://www.cnblogs.com/tansm/p/TypeScript_Handbook_Classes.html
 				}
 				
 
-
+5，this
+	this和箭头函数(箭头函数能保存函数创建时的this值的指向，)
 
 
 
