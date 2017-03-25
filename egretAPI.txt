@@ -1,4 +1,4 @@
-1，Bitmap
+1，Bitmap(  Bitmap 类表示用于显示位图图片的显示对象。  )
 	class BitmapExample extends egret.DisplayObjectContainer {
     		public constructor() {
        			super();
@@ -27,3 +27,16 @@
         		this.addChild(new egret.Bitmap(texture));
     		}
 	}
+
+2，BitmapData( BitmapData 对象是一个包含像素数据的数组。 )
+
+3，BitmapFillMode( BitmapFillMode 类定义Bitmap的图像填充方式。 )
+	例子：
+		//默认是以拉伸填充区域
+        	egret.log(bitmap.fillMode);//scale
+        	//设置重复位图以填充区域
+        	bitmap.fillMode = egret.BitmapFillMode.REPEAT;
+        	bitmap.width = 480;
+        	bitmap.height = 800;
+        	egret.log(bitmap.fillMode);//repeat
+
