@@ -40,3 +40,19 @@
         	bitmap.height = 800;
         	egret.log(bitmap.fillMode);//repeat
 
+4，位图字体，是一个字体的纹理集，通常作为BitmapText.font属性的值。
+	例子：	
+		class BitmapFontExample extends egret.DisplayObjectContainer{
+			public constructor(){
+				super();
+				RES.getByUrl("resource/assets/font.fnt",this.onLoadComplete,this,RES.Resourceltem.TYPE_FONT);
+			}
+			private onLoadComplete(font:egret.BitmapFont):void{
+				var bitmapText:egret.BitmapText = new egret.BitmapText();
+				bitmapText.font = font;
+				this.addChild(bitmapText);
+				bitmapText.text = "Hello Egret";
+			}
+		}
+	
+
