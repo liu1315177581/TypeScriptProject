@@ -55,4 +55,7 @@
 			}
 		}
 	
-
+5，事件：
+	egret.Event.ADDED		//将显示对象添加到显示列表中时
+	egret.Event.ADDED_TO_STAGE	//在将显示对象直接添加到舞台显示列表或将包含显示对象的子树添加至舞台显示列表中时
+	egret.Event.REMOVED		//将要从显示列表中删除显示对象时
