@@ -63,9 +63,11 @@
  	egret.Event.ENTER_FRAME		//[广播事件] 播放头进入新帧时调度。
  	egret.Event.RENDER		//[广播事件] 将要更新和呈现显示列表时调度。
 	egret.TouchEvent.TOUCH_MOVE	//当用户第触摸设备时进行的调度
-
-
-
+	egret.TouchEvent.TOUCH_BEGIN	//当用户第一次触摸启用触摸的设备时的调度(手指按下)
+	egret.TouchEvent.TOUCH_END	//当用户移除与启用触摸的设备的接触时的调度(手指抬起)
+	egret.TouchEvent.TOUCH_TAP	//当用户按下抬起时的调度(一次触摸)
+	egret.TouchEvent.TOUCH_RELEASSE_OUTSIDE
+					//当用户在启用触摸设备上的已启动接触的不同DisplayObject实例上抬起接触点时的调度()
 
 
 
