@@ -69,8 +69,18 @@
 	egret.TouchEvent.TOUCH_RELEASSE_OUTSIDE
 					//当用户在启用触摸设备上的已启动接触的不同DisplayObject实例上抬起接触点时的调度()
 
-
-
+6，game
+	egret.MovieClip类型
+	公共属性:
+		currentFrame:number		//当前播放的帧的序号
+		currentFrameLabel:strinf	//当前播放的帧的标签
+		curentLabel:string		//当前播放的帧对应的标签，如果当前帧没有标签，则currentLabel返回包含标签的先前帧的标签
+		frameRate:number		//MovieClip实例的帧频
+		isPlaying:boolean		//MovieClip实例当前是否在播放
+		
+			
+		
+	
 
 
 
