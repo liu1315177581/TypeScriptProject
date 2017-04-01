@@ -1,0 +1,10 @@
+1,3D坐标系
+	egret3D:
+		局部空间(Local Space,物体空间(Object Space))
+		世界空间(World Space)
+		观察空间(View Space,视觉空间(Eye Space))
+		裁剪空间(Clip Space)
+		屏幕空间(Screen Space)
+
+2，局部空间(Local Space)
+	局部空间是指对象所在的坐标空间
